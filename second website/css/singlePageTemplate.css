@@ -21,7 +21,7 @@ body {
 /* Navigation */
 header {
 	width: 100%;
-	height: 10%;
+	height:7.5%;
 	background-color: rgba(23,150,212,1.00);
 	border-bottom: 1px solid #FFFFFF;
 }
@@ -74,8 +74,8 @@ ul li:hover a {
 /* Hero Section */
 .hero {
 	background-color: rgba(23,150,212,1.00);
-	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 .light {
 	font-weight: bold;
