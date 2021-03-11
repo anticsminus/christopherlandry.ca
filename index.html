@@ -273,45 +273,7 @@ body {
 </style>
 </head>
 <body id="top" class="is-index  body-sidebar-right">
-  <script>
-  $(function(){
-    $(".typed").typed({
-      strings: ["Developers.", "Designers.", "People."],
-      // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-      stringsElement: null,
-      // typing speed
-      typeSpeed: 30,
-      // time before typing starts
-      startDelay: 1200,
-      // backspacing speed
-      backSpeed: 20,
-      // time before backspacing
-      backDelay: 500,
-      // loop
-      loop: true,
-      // false = infinite
-      loopCount: 5,
-      // show cursor
-      showCursor: false,
-      // character for cursor
-      cursorChar: "|",
-      // attribute to type (null == text)
-      attr: null,
-      // either html or text
-      contentType: 'html',
-      // call when done callback function
-      callback: function() {},
-      // starting callback function before each string
-      preStringTyped: function() {},
-      //callback for every typed string
-      onStringTyped: function() {},
-      // callback for reset
-      resetCallback: function() {}
-    });
-  });
-      </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+
 <div class="back-top square-box text-white"> <a href="#top" class="vertical-align horizontal-align"> <i class="fa fa-2x fa-caret-up"></i> <span class="sr-only">Back to top</span></a></div>
   <!--<div class="wrapper">
   <!-- Sidebar-
@@ -357,7 +319,11 @@ body {
                 <h2 class="h6 nomargin logo-tagline text-normal island-quarter muted text-white"></h2>
               </a></div> -->
               <!-- Social Media-->
-
+              <div class="banner">
+            <div class="typed_wrap">
+                  <h1>I am a <span class="typed"></span></h1>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -481,13 +447,6 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
           <div class="hp-block">
             <div class="row">
               <div class="skill-longtext col-sm-6 col-md-7 pad-bottom col-lg-12">
-
-
-                    	<div class="banner">
-                    <div class="typed_wrap">
-                    			<h1>We Are <span class="typed"></span></h1>
-                    		</div>
-                    	</div>
             	</div>
                 <h2 class="block-title text-left">Work Experience</h2>
                 <p>&nbsp;</p>
@@ -641,6 +600,45 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
               window.location.pathname === '/') {
               $('#top').addClass('is-home');
           }
+      });</script>
+      <script src="assets/vendor/typed.js"></script>
+      <script>
+      $(function(){
+        $(".typed").typed({
+          strings: ["Programmer.", "Developer.", "Person."],
+          // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+          stringsElement: null,
+          // typing speed
+          typeSpeed: 30,
+          // time before typing starts
+          startDelay: 1200,
+          // backspacing speed
+          backSpeed: 20,
+          // time before backspacing
+          backDelay: 500,
+          // loop
+          loop: true,
+          // false = infinite
+          loopCount: 5,
+          // show cursor
+          showCursor: false,
+          // character for cursor
+          cursorChar: "|",
+          // attribute to type (null == text)
+          attr: null,
+          // either html or text
+          contentType: 'html',
+          // call when done callback function
+          callback: function() {},
+          // starting callback function before each string
+          preStringTyped: function() {},
+          //callback for every typed string
+          onStringTyped: function() {},
+          // callback for reset
+          resetCallback: function() {}
+        });
       });
-
+          </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 </html>
