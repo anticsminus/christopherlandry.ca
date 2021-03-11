@@ -220,8 +220,7 @@ body {
   color: white;
 	/*centers it in the .banner*/
 	position: absolute;
-  top: 50%;
-	left: 50%;
+
 	-webkit-transform: translate(-50%,-50%);
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
@@ -304,7 +303,9 @@ body {
           <div class="hp-block">
             <div class="row row-flex-stretch">
               <div class="about-longtext col-xs-12 pad-bottom col-sm-6 col-md-7">
-
+                <div class="typed_wrap">
+                      <h1>I am a <span class="typed"></span></h1>
+                  </div>
                 <h2 class="block-title text-left">About</h2>
                 <div class="post-text">Just somebody who loves to program. Contact me if you're interested in making a change together.</div>
               </div>
@@ -321,9 +322,6 @@ body {
             </div>
           </div>
         </div>
-        <div class="typed_wrap">
-              <h1>I am a <span class="typed"></span></h1>
-          </div>
       </div>
       <!-- Skills-->
       <div class="block-skills col-xs-12 hp-only text-black order-2">
@@ -333,18 +331,22 @@ body {
 
               <div class="skill-longtext col-sm-6 col-md-7 pad-bottom">
                 <h2 class="block-title text-left">Education</h2>
-                <div class="post-text">
-                  <strong>
+                <div class="post-text"> <strong>
                   <p style="float: left;"> <a href="https://www.stlawrencecollege.ca/"> St. Lawrence College </a> </p>
-                  <h6><p style="text-align: right;"> 2017-2019</p></h6>
-                  </strong>
+                  <h6>
+                    <p style="text-align: right;"> 2017-2019</p>
+                  </h6></strong>
                   <br>
+
+
                   <p class="text-left">Graduated and received the Game Programming diploma </p>
                   <strong>
                   <p style="float: left;"> <a href="https://stlawrence.ucdsb.on.ca/"> St. Lawrence Secondary </a> </p>
-                  <h6><p style="text-align: right;"> 2010-2014</p></h6>
+                  <h6>
+                    <p style="text-align: right;"> 2010-2014
+                  </h6>
                   </strong>
-
+                  </p>
                   <br>
                   <p class="text-left">Graduated and Received the Ontario Secondary School Diploma</p>
                 </div>
@@ -394,33 +396,37 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
                 <p>&nbsp;</p>
                 <div class="post-text"> <strong>
                   <p style="float: left;"><strong> Benson Auto Parts </strong></p>
-                  <h6><p style="text-align: right;">2021-Present</p></h6>
+                  <h6>
+                    <p style="text-align: right;">2021-Present</p>
+                  </h6>
                   </strong>
-                    <br>
+                  </p>
+                  <p class="text-left">&nbsp;</p>
                   <p class="text-left">Managed SQL database and website development <br>
                     Ensured internet connectivity at 200 locations <br>
                     Helped employees remotely with Teamviewer <br>
                     Expected to use osTicket to manage tickets and finish them effectively</p>
                 </div>
-                    <br>
-                <div class="post-text">
-                  <strong>
-                  <p style="float: left;"> Xplornet</p>
-                  <h6><p style="text-align: right;">2017-Present</p></h6>
+                <p>&nbsp;</p>
+                <div class="post-text"> <strong>
+                  <p style="float: left;"><strong> Xplornet </strong>
+                  <h6>
+                    <p style="text-align: right;">2017-Present</p>
+                  </h6>
                   </strong>
-                    <br>
+                  <p class="text-left">&nbsp;</p>
                   <p class="text-left"> Provided technical support for inbound and outbound callers<br>
                     Retained over 90% of my customers for over 12 months when dealing with billing<br>
                     Excellent interpersonal skills build rapport and help educate the customer<br>
                     Worked within a CRM environment which was powered by Salesforce and helped manage tickets<br>
                   </p>
-                      <br>
-                  <div class="post-text">
-                    <strong>
+                  <p>&nbsp;</p>
+                  <div class="post-text"> <strong>
                     <p style="float: left;"> SLC Research </p>
-                    <h6><p style="text-align: right;"> 2019 </p></h6>
-                    </strong>
-                    <br>
+                    <h6>
+                      <p style="text-align: right;"> 2019 </p>
+                    </h6>
+                    </strong> <br>
                     <p> Managed code and developed architecture for a Virtual Reality Experience <br>
                       Gathered information from real life scenarios to help simulate in-game experiences <br>
                       Released for Oculus Rift S, Go and HTC VIVE and was functional and was trusted to fix final bugs <br>
@@ -449,10 +455,13 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
             </div>
           </div>
           <!-- Showcase--><!-- IndexPage /////////////////////////////////////////////////////////////////////////////////////-->
-</div>
+          </path>
+          </svg>
+          </a></div>
       </div>
     </div>
-
+  </div>
+  </li>
   <!-- Testimonials-->
   <div class="block-testimonials col-xs-12 hp-only text-black order-4">
     <div class="container pad-top-triple pad-bottom-triple">
@@ -504,6 +513,8 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
       </div>
     </div>
   </div>
+  <!-- Contact--><!-- Newsletter--></div>
+</div>
 <div class="wrapper-footer">
   <!-- Footer-->
   <footer class="site-footer text-white">
@@ -519,10 +530,10 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
         </ul>
       </div>
       <div class="copyright bt micro">Antics Studios</div>
-      <div class="credits micro hf text-uppercase"><a href="https://www.christopherlandry.ca">Christopher Landry</a>
-      </div>
+      <div class="credits micro hf text-uppercase"><a href="https://www.christopherlandry.ca">Christopher Landry</a></div>
     </div>
   </footer>
+</div>
 </div>
 <!-- Javascript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
