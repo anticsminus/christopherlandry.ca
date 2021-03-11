@@ -20,7 +20,6 @@
 <meta property="og:type" content="tumblr-feed:tumblelog">
 <meta property="og:image" content="/assets/anticslogo.png">
 
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Google Fonts-->
@@ -210,9 +209,109 @@ body {
 }
 .client-logo {
 }
+
+
+.typed_wrap {
+	display: block;
+	border: 4px solid #ecf0f1;
+	width: 290px;
+	height: auto;
+	padding: 30px;
+
+	/*centers it in the .banner*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.typed_wrap h1 {
+	display: inline;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.banner {
+	display: block;
+	min-height: 200px;
+	width: 100%;
+	position: relative;
+}
 </style>
 </head>
 <body id="top" class="is-index  body-sidebar-right">
+  <script>
+  $(function(){
+    $(".typed").typed({
+      strings: ["Developers.", "Designers.", "People."],
+      // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+      stringsElement: null,
+      // typing speed
+      typeSpeed: 30,
+      // time before typing starts
+      startDelay: 1200,
+      // backspacing speed
+      backSpeed: 20,
+      // time before backspacing
+      backDelay: 500,
+      // loop
+      loop: true,
+      // false = infinite
+      loopCount: 5,
+      // show cursor
+      showCursor: false,
+      // character for cursor
+      cursorChar: "|",
+      // attribute to type (null == text)
+      attr: null,
+      // either html or text
+      contentType: 'html',
+      // call when done callback function
+      callback: function() {},
+      // starting callback function before each string
+      preStringTyped: function() {},
+      //callback for every typed string
+      onStringTyped: function() {},
+      // callback for reset
+      resetCallback: function() {}
+    });
+  });
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 <div class="back-top square-box text-white"> <a href="#top" class="vertical-align horizontal-align"> <i class="fa fa-2x fa-caret-up"></i> <span class="sr-only">Back to top</span></a></div>
   <!--<div class="wrapper">
   <!-- Sidebar-
@@ -299,7 +398,6 @@ body {
             <div class="row row-flex-stretch">
               <div class="about-longtext col-xs-12 pad-bottom col-sm-6 col-md-7">
                 <h2 class="block-title text-left">About</h2>
-                      <p>I am a <span class="typed" data-typed-items="Programmer, Developer, Animator"></span></p>
                 <div class="post-text">Just somebody who loves to program. Contact me if you're interested in making a change together.</div>
               </div>
               <div class="about-cta col-xs-12 pad-bottom col-sm-6 col-md-4 col-md-offset-1 vertical-align horizontal-align"><a href="CV_ChristopherLandry.docx " class="btn btn-accent btn-large hf h3 btn-square">Download Resume</a>
@@ -383,6 +481,14 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
           <div class="hp-block">
             <div class="row">
               <div class="skill-longtext col-sm-6 col-md-7 pad-bottom col-lg-12">
+
+
+                    	<div class="banner">
+                    <div class="typed_wrap">
+                    			<h1>We Are <span class="typed"></span></h1>
+                    		</div>
+                    	</div>
+            	</div>
                 <h2 class="block-title text-left">Work Experience</h2>
                 <p>&nbsp;</p>
                 <div class="post-text"> <strong>
@@ -536,6 +642,5 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
               $('#top').addClass('is-home');
           }
       });
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
 
 </html>
