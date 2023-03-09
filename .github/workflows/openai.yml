@@ -1,0 +1,8 @@
+- name: Set up environment
+  env:
+    OPENAI_SECRET: ${{ secrets.OPENAI_SECRET }}
+  run: 
+    python -m venv venv
+    source venv/scripts/activate
+    pip install -r requirements.txt
+    python -m dotenv run flask run
