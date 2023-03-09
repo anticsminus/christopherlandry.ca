@@ -6,6 +6,38 @@
     href="../static/dog.png"
   />
   <link rel="stylesheet" href="../static/main.css" />
+
+  <script type="text/javascript">
+    const apiKey = '${{ secrets.OPENAI_SECRET }}';
+
+const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const prompt = document.getElementById('text').value;
+
+  fetch('https://api.openai.com/v1/models/davinci-3/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      prompt: prompt,
+      max_tokens: 5
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    const result = data.choices[0].text;
+    const resultDiv = document.createElement('div');
+    resultDiv.classList.add('result');
+    resultDiv.textContent = result;
+    form.appendChild(resultDiv);
+  });
+});
+
+    
+    </script>
 </head>
 
 <body>

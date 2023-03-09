@@ -1,21 +1,8 @@
-on:
-  pull_request:
-    types: [opened]
-
-
-env:
-  OPENAI_API_KEY: ${{ secrets.API_KEY }}
-- name: Set up Python environment
-  uses: actions/setup-python@v2
-  with:
-    python-version: '3.11'
-- name: Set up virtual environment
-  run: python -m venv venv
-- name: Activate virtual environment
-  run: source venv/scripts/activate
-- name: Install dependencies
-  run: pip install openai requests
-
-- name: Run OpenAI script
-  run: |
-    python app.py
+- name: Set up environment
+  env:
+    OPENAI_SECRET: ${{ secrets.OPENAI_SECRET }}
+  run: 
+    python -m venv venv
+    source venv/scripts/activate
+    pip install -r requirements.txt
+    python -m dotenv run flask run
