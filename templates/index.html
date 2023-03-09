@@ -3,15 +3,15 @@
   <title>OpenAI Quickstart</title>
   <link
     rel="shortcut icon"
-    href="{{ url_for('https://christopherlandry.ca/static/', filename='dog.png') }}"
+    href="{{ url_for('https://christopherlandry.ca/templates/index.html', filename='dog.png') }}"
   />
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  <link rel="stylesheet" href="../static/main.css" />
 
  <script> var xhr = new XMLHttpRequest(); xhr.open('POST', 'https://api.openai.com/v1/engines/davinci/completions', true); xhr.setRequestHeader('Content-Type', 'application/json'); xhr.setRequestHeader('Authorization', 'Bearer sk-eff1a7wc1xP3ZhUpu1OPT3BlbkFJWGfeIHr3EZ5kkzFyssIBc'); xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) { var resp = JSON.parse(this.responseText); document.getElementById('output').innerHTML = resp.choices[0].text; } }; xhr.send(JSON.stringify({ prompt: document.getelementbyid("text").text , max_tokens: 50 })); </script> 
 </head>
 
 <body>
-  <img src="{{ url_for('https://christopherlandry.ca/static/', filename='dog.png') }}" class="icon" />
+  <img src="../static/dog.png" class="icon">
   <h3>PetGPT</h3>
   <form action="/" method="post">
     <input type="text" name="animal" ID="text" placeholder="Write your prompt here" required />
