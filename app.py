@@ -13,7 +13,6 @@ def index():
         animal = request.form["animal"]
         
         response = openai.Completion.create(
-            api_key= os.getenv("OPENAI_SECRET"),
             model="text-davinci-003",
             prompt=generate_prompt(animal),
             temperature=1.0,
