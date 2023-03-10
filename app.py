@@ -19,10 +19,10 @@ def index():
             stop=None,
             max_tokens=1024
         )
-        return redirect(url_for("index", result=response.choices[0].text))
+        return redirect(url_for("/templates/index", result=response.choices[0].text))
 
     result = request.args.get("result")
-    return render_template("https://Christopherlandry.ca/templates/index.html", result=result)
+    return render_template("/templates/index.html", result=result)
 
 
 def generate_prompt(animal):
