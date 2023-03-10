@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <link
+    rel="shortcut icon"
+    href="../static/dog.png"
+  />
+  <link rel="stylesheet" href="../static/main.css" />
+
+
+</head>
+
+<body>
+  <img src="../static/dog.png" class="icon">
+  <h3>PetGPT</h3>
+  <form action="/" method="post">
+    <input type="text" name="animal" ID="text" placeholder="Write your prompt here" required />
+    <input type="submit" id="submit" value="Send Request" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
