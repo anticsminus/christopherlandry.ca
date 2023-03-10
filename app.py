@@ -1,10 +1,11 @@
 import os
 
 import openai
-from flask import Flask, redirect, render_template, request, url_for
-
+from flask import Flask, redirect, render_template, request, url_for,jsonify
+from flask_cors import CORS
 app = Flask(__name__)
-openai.api_key = "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"
+CORS(app)
+openai.api_key = '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'
 
 
 @app.route("/", methods=("GET", "POST"))
@@ -13,16 +14,24 @@ def index():
         animal = request.form["animal"]
         
         response = openai.Completion.create(
-            model="text-davinci-003",
-            prompt=generate_prompt(animal),
+            model="text-davinci-002",
+            prompt= generate_prompt(animal),
             temperature=1.0,
             stop=None,
-            max_tokens=1024
+            max_tokens=1024,
+            
         )
-        return redirect(url_for("/templates/index", result=response.choices[0].text))
+    response = openai.Completion.create(
+        engine='text-davinci-002',
+        prompt= generate_prompt('animal'),
+        temperature=1.0,
+        stop=None,
+        max_tokens=1024,
+    )
+    return jsonify(response)
 
     result = request.args.get("result")
-    return render_template("/templates/index.html", result=result)
+    return render_template("index.html", result=result)
 
 
 def generate_prompt(animal):
