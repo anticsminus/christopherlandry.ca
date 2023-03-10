@@ -97,4 +97,4 @@ jobs:
         run: |
           python app.py
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_SECRET }}
+          OPENAI_API_KEY: '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'
