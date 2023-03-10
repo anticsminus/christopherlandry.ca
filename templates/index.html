@@ -1,23 +1,41 @@
 <!DOCTYPE html>
+<html>
 <head>
   <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="../static/dog.png"
-  />
+  <link rel="shortcut icon" href="../static/dog.png" />
   <link rel="stylesheet" href="../static/main.css" />
 
-
 </head>
-
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
   <img src="../static/dog.png" class="icon">
-  <h3>PetGPT</h3>
-  <form action="/" method="post">
-    <input type="text" name="animal" ID="text" placeholder="Write your prompt here" required />
-    <input type="submit" id="submit" value="Send Request" />
+  <h3>Antics Studios</h3>
+  <form action="/" id="submit" method="post">
+    <input type="text" name="animal" id="text" placeholder="Write your prompt here" required />
+    <input type="submit" value="Send Request" />
   </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
+  <div class="result" id="result"></div>
+
+  <script type="text/javascript">
+    const form = document.querySelector('form');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const prompt = document.getElementById('text').value;
+
+      try {
+        const response = await axios.post('/openai', { prompt });
+        const result = response.data.choices[0].text;
+        resultDiv.textContent = result;
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  </script>
 </body>
+</html>
