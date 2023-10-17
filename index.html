@@ -209,7 +209,26 @@ body {
 }
 .client-logo {
 }
+    
+    .experience-item {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .job-details {
+        display: flex;
+        flex-direction: column;
+        order:3;
+    }
+
+    .job-title {
+        order: 1; /* Place the job title on top */
+    }
+
+    .job-period {
+        order: 2; /* Place the job period below the job title */
+        text-align: right;
+    }
 
 .typed_wrap {
 	display: block;
@@ -386,6 +405,7 @@ text-align: center;
             <div class="row">
               <div class="skill-longtext col-sm-6 col-md-7 pad-bottom">
                 <h2 class="block-title text-left">Education</h2>
+                <br>
                 <div class="post-text"> <strong>
                   <p style="float: left;"> <a href="https://www.stlawrencecollege.ca/"> St. Lawrence College </a> </p>
                   <h6>
@@ -395,7 +415,9 @@ text-align: center;
                   </strong>
                   </p>
                   <p class="text-left">Graduated and received the Game Programming diploma </p>
+                  <br>
                   <strong>
+                      
                   <p style="float: left;"> <a href="https://stlawrence.ucdsb.on.ca/"> St. Lawrence Secondary </a> </p>
                   <h6>
                     <p style="text-align: right;"> 2010-2014
@@ -457,46 +479,57 @@ box-shadow: 15.62px 15.62px 44px #D1D3D7, -15.62px -15.62px 44px #FFFFFF; width:
                   </div>
 
                   -->
-                <h2 class="block-title text-left">Work Experience</h2>
-                <p>&nbsp;</p>
-                <div class="post-text"> <strong>
-                  <p style="float: left;"><strong> Benson Auto Parts </strong></p>
-                  <h6>
-                    <p style="text-align: right;">2021-Present</p>
-                  </h6>
-                  </strong>
-                  </p>
-                  <p class="text-left">&nbsp;</p>
-                  <p class="text-left">Managed SQL database and website development <br>
-                    Ensured internet connectivity at 200 locations <br>
-                    Helped employees remotely with Teamviewer <br>
-                    Expected to use osTicket to manage tickets and finish them effectively</p>
-                </div>
-                <p>&nbsp;</p>
-                <div class="post-text"> <strong>
-                  <p style="float: left;"><strong> Xplornet </strong>
-                  <h6>
-                    <p style="text-align: right;">2017-2021</p>
-                  </h6>
-                  </strong>
-                  <p class="text-left">&nbsp;</p>
-                  <p class="text-left"> Provided technical support for inbound and outbound callers<br>
-                    Retained over 90% of my customers for over 12 months when dealing with billing<br>
-                    Excellent interpersonal skills build rapport and help educate the customer<br>
-                    Worked within a CRM environment which was powered by Salesforce and helped manage tickets<br>
-                  </p>
-                  <p>&nbsp;</p>
-                  <div class="post-text"> <strong>
-                    <p style="float: left;"> SLC Research </p>
-                    <h6>
-                      <p style="text-align: right;"> 2019 </p>
-                    </h6>
-                    </strong> <br>
-                    <p> Managed code and developed architecture for a Virtual Reality Experience <br>
-                      Gathered information from real life scenarios to help simulate in-game experiences <br>
-                      Released for Oculus Rift S, Go and HTC VIVE and was functional and was trusted to fix final bugs <br>
-                      Managed project through Trello and helped manage teams and select individuals for tickets <br>
+                  <div class="work-experience">
+                      <h2 class="section-title">Work Experience</h2>
+                      
+                          <h3 class="job-title">MPIQC</h3>
+                          <p class="job-period">2023</p>
+                      <div class="experience-item">
+                          <ul class="job-description">
+                              <li>Revamped the in-house payroll system, improving efficiency and accuracy</li>
+                              <li>Implemented updates to the intranet tools, enhancing functionality and user experience for employees</li>
+                              <li>Introduced new tools and technologies to streamline company operations and monitoring</li>
+                              <li>Led a confidential project that brought innovative solutions to the company's operations</li>
+                              <li>Maintained strict adherence to non-disclosure agreements (NDAs) in handling sensitive company information</li>
+                          </ul>
+                      </div>
+                      <br>
+                          <h3 class="job-title">Benson Auto Parts</h3>
+                          <p class="job-period">2021-2023</p>
+                      <div class="experience-item">
+                          <ul class="job-description">
+                              <li>Developed in-house software, including payroll systems, intranet solutions, and various tools, from the ground up using ASP.NET</li>
+                                    <li>Served as a database administrator, ensuring data integrity, security, and optimal performance</li>
+                                    <li>Held IT Level 2 (senior tier) responsibilities, providing advanced technical support and guidance</li>
+                                    <li>Trusted with access to confidential personal information, maintaining strict data security protocols</li>
+                          </ul>
+                      </div>
+<br>
+
+    <h3 class="job-title">Xplornet</h3>
+    <p class="job-period">2017-2021</p>
+                      <div class="experience-item">
+                          <ul class="job-description">
+                              <li>Provided technical support for inbound and outbound callers</li>
+                              <li>Maintained a 90%+ customer retention rate during billing interactions</li>
+                              <li>Built rapport and educated customers with excellent interpersonal skills</li>
+                              <li>Managed tickets within a CRM environment powered by Salesforce</li>
+                          </ul>
+                      </div>
+<br>
+
+    <h3 class="job-title">SLC Research</h3>
+    <p class="job-period">2019</p>
+                      <div class="experience-item">
+                          <ul class="job-description">
+                              <li>Managed code and developed architecture for a Virtual Reality Experience</li>
+                              <li>Gathered real-life scenarios to simulate in-game experiences</li>
+                              <li>Released VR experience for Oculus Rift S, Go, and HTC VIVE</li>
+                              <li>Managed the project using Trello and supervised team members</li>
+                          </ul>
+                      </div>
                   </div>
+
 
                   <div class="skill-stats col-sm-6 col-md-4 col-md-offset-1 pad-bottom col-lg-offset-0 col-lg-5">
                     <div class="skill-1 skill-single">
