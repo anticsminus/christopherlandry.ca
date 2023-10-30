@@ -223,11 +223,14 @@ body {
 
     .job-title {
         order: 1; /* Place the job title on top */
+        display: contents;
     }
 
     .job-period {
         order: 2; /* Place the job period below the job title */
         text-align: right;
+        float: right;
+        display: inline-block; /* actually, we want it beside the title, looks cleaner*/
     }
 
 .typed_wrap {
