@@ -40,7 +40,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f5f6f8;
+  --background-color: #ffffff;
   --surface-color: #ffffff;
 }
 
@@ -143,7 +143,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #3d4d6a;
+  --background-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -157,7 +157,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 120px;
   margin-right: 8px;
 }
 
@@ -168,8 +168,9 @@ h6 {
   color: var(--heading-color);
   letter-spacing: 2px;
   text-transform: uppercase;
+  /*
   font-size: 50px; font-weight: bold; background: linear-gradient(45deg, #000 25%, #fff 25%, #fff 50%, #000 50%, #000 75%, #fff 75%, #fff 100%); background-size: 10px 10px; -webkit-background-clip: text; color: transparent;
-}
+*/}
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
@@ -215,7 +216,7 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(40, 58, 90, 0.9);
+  --background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*--------------------------------------------------------------
